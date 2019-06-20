@@ -1,0 +1,73 @@
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+        -verbose
+Design : riscv
+Version: J-2014.09-SP4
+Date   : Wed Mar 20 20:58:07 2019
+****************************************
+
+
+Library(s) Used:
+
+    saed32lvt_tt1p05vn40c (File: /users/ugrad2/2012/spring/pooriam/libraries/saed32lvt_tt1p05vn40c.db)
+    saed32sram_tt1p05vn40c (File: /users/ugrad2/2012/spring/pooriam/libraries/saed32sram_tt1p05vn40c.db)
+    gtech (File: /ecelib/linware/synopsys15/dc/libraries/syn/gtech.db)
+
+
+Operating Conditions: tt1p05vn40c   Library: saed32lvt_tt1p05vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+riscv                  ForQA             saed32lvt_tt1p05vn40c
+Datapath               ForQA             saed32lvt_tt1p05vn40c
+adder_WIDTH9_0         ForQA             saed32lvt_tt1p05vn40c
+flopr_WIDTH9           ForQA             saed32lvt_tt1p05vn40c
+mux2_WIDTH9_0          ForQA             saed32lvt_tt1p05vn40c
+instructionmemory      ForQA             saed32lvt_tt1p05vn40c
+RegFile                16000             saed32lvt_tt1p05vn40c
+mux2_WIDTH32_0         ForQA             saed32lvt_tt1p05vn40c
+imm_Gen                ForQA             saed32lvt_tt1p05vn40c
+alu                    8000              saed32lvt_tt1p05vn40c
+datamemory             70000             saed32lvt_tt1p05vn40c
+mux2_WIDTH32_1         ForQA             saed32lvt_tt1p05vn40c
+mux2_WIDTH9_1          ForQA             saed32lvt_tt1p05vn40c
+adder_WIDTH9_1         ForQA             saed32lvt_tt1p05vn40c
+
+
+Global Operating Voltage = 1.05 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+riscv                                  1.26e+03 5.25e+03 1.23e+10 1.88e+04 100.0
+  dp (Datapath)                        2.26e+03 5.24e+03 1.22e+10 1.97e+04 104.8
+    data_mem (datamemory)                 1.057  628.235 1.48e+04  629.306   3.3
+    alu_module (alu)                     76.007  141.360 1.20e+09 1.41e+03   7.5
+    srcbmux (mux2_WIDTH32_1)             13.077    5.521 5.65e+07   75.091   0.4
+    Ext_Imm (imm_Gen)                     6.463    5.357 3.55e+07   47.319   0.3
+    resmux (mux2_WIDTH32_0)               7.527    4.061 5.32e+07   64.812   0.3
+    conmux (mux2_WIDTH9_1)                0.387    0.873 4.22e+06    5.478   0.0
+    rf (RegFile)                            N/A 4.42e+03 1.07e+10 1.49e+04  79.1
+    instr_mem (instructionmemory)           N/A    0.000    0.000      N/A   N/A
+      C8 (*MUX_OP_128_7_30)               0.132    0.000    0.000    0.132   0.0
+    pcmux (mux2_WIDTH9_0)                 1.597    2.466 1.49e+07   18.964   0.1
+    pcaddImm (adder_WIDTH9_1)             2.760    4.089 3.50e+07   41.878   0.2
+    pcreg (flopr_WIDTH9)                    N/A   32.429 7.52e+07      N/A   N/A
+    pcadd (adder_WIDTH9_0)                1.585    4.062 3.50e+07   40.682   0.2
+1

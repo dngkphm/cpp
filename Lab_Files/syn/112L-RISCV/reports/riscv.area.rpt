@@ -1,0 +1,88 @@
+Warning: duplicate option '-nosplit' overrides previous value. (CMD-018)
+Warning: Design 'riscv' has '12' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : riscv
+Version: J-2014.09-SP4
+Date   : Wed Mar 20 20:58:03 2019
+****************************************
+
+Library(s) Used:
+
+    saed32lvt_tt1p05vn40c (File: /users/ugrad2/2012/spring/pooriam/libraries/saed32lvt_tt1p05vn40c.db)
+    saed32sram_tt1p05vn40c (File: /users/ugrad2/2012/spring/pooriam/libraries/saed32sram_tt1p05vn40c.db)
+    gtech (File: /ecelib/linware/synopsys15/dc/libraries/syn/gtech.db)
+
+Number of ports:                           34
+Number of nets:                           116
+Number of cells:                           67
+Number of combinational cells:             62
+Number of sequential cells:                 4
+Number of macros/black boxes:               0
+Number of buf/inv:                         12
+Number of references:                      20
+
+Combinational area:               9493.294980
+Buf/Inv area:                      348.177278
+Noncombinational area:            6856.297055
+Macro/Black Box area:            50667.683594
+Net Interconnect area:            7126.455533
+
+Total cell area:                 67017.275629
+Total area:                      74143.731162
+
+Information: This design contains unmapped logic. (RPT-7)
+Information: This design contains black box (unknown) components. (RPT-8)
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  -------------------  -------------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
+                                  Total       Total    national   national   boxes       Design
+--------------------------------  ----------  -------  ---------  ---------  ----------  -----------------
+riscv                             67017.2756    100.0   129.1052    20.8398      0.0000  riscv
+dp                                66867.3307     99.8     0.0000     0.0000      0.0000  Datapath
+dp/Ext_Imm                          124.0223      0.2   124.0223     0.0000      0.0000  imm_Gen
+dp/alu_module                      2211.0528      3.3  2205.9699     5.0829      0.0000  alu
+dp/conmux                            16.2652      0.0    16.2652     0.0000      0.0000  mux2_WIDTH9_1
+dp/data_mem                       50668.9543     75.6     1.2707     0.0000  50667.6836  datamemory
+dp/instr_mem                          0.0000      0.0     0.0000     0.0000      0.0000  instructionmemory
+dp/pcadd                             47.7791      0.1    47.7791     0.0000      0.0000  adder_WIDTH9_0
+dp/pcaddImm                          47.7791      0.1    47.7791     0.0000      0.0000  adder_WIDTH9_1
+dp/pcmux                             24.1437      0.0    24.1437     0.0000      0.0000  mux2_WIDTH9_0
+dp/pcreg                             66.5857      0.1     2.5414    64.0443      0.0000  flopr_WIDTH9
+dp/resmux                            84.3758      0.1    84.3758     0.0000      0.0000  mux2_WIDTH32_0
+dp/rf                             13491.2345     20.1  6724.9044  6766.3301      0.0000  RegFile
+dp/srcbmux                           85.1382      0.1    85.1382     0.0000      0.0000  mux2_WIDTH32_1
+--------------------------------  ----------  -------  ---------  ---------  ----------  -----------------
+Total                                                  9493.2950  6856.2971  50667.6836
+
+
+Area of detected synthetic parts
+--------------------------------
+  No DW parts to report!
+
+Estimated area of ungrouped synthetic parts
+-------------------------------------------
+                                      Estimated  Perc. of
+  Module              Implem.  Count       Area cell area
+  ------------------- -------  ----- ---------- ---------
+  DP_OP_51J2_122_8795     str      1   295.3832      0.4%
+  DW01_add            apparch      2    82.8887      0.1%
+  DW01_sub            apparch      1   192.9046      0.3%
+  DW_cmp              apparch      5   477.7985      0.7%
+  DW_leftsh              astr      1   382.2442      0.6%
+  DW_rightsh             astr      2   755.2780      1.1%
+  ------------------- -------  ----- ---------- ---------
+  DP_OP Subtotal:                  1   295.3832      0.4%
+  Total:                          12  2186.4972      3.3%
+
+Subtotal of datapath(DP_OP) cell area:  295.3832  0.4%  (estimated)
+Total synthetic cell area:              2186.4972  3.3%  (estimated)
+
+1
